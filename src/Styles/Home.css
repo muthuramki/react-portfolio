@@ -1,0 +1,73 @@
+/* Home.css */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10% 0;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+  }
+  
+  .home.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .header-text {
+    text-align: center;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .header-text.text-reveal {
+    animation: textReveal 1s ease-out 0.5s forwards;
+  }
+  
+  .header-text .role {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .header-text .divider {
+    margin: 0 10px;
+    color: #ff004f;
+  }
+  
+  .header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+  
+  .header-text h1 span {
+    color: #ff004f;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .header-text {
+      margin-top: 30%;
+      font-size: 24px;
+    }
+  
+    .header-text h1 {
+      font-size: 48px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-text {
+      margin-top: 40%;
+      font-size: 20px;
+    }
+  
+    .header-text h1 {
+      font-size: 36px;
+    }
+  }
