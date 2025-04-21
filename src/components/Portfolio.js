@@ -7,6 +7,7 @@ import ProjectModal from "./ProjectModal";
 import work1 from "../images/work-1.png";
 import work2 from "../images/7DP4CP6D_output_0.jpeg";
 import work3 from "../images/travel.png";
+import work4 from "../images/sap.png";
 
 const Portfolio = () => {
   const [activeModal, setActiveModal] = useState(null);
@@ -59,14 +60,13 @@ const Portfolio = () => {
               <a
                 className="toggle-link"
                 onClick={() => toggleModal("modal1")}
-                style={{ cursor: "pointer", }} 
+                style={{ cursor: "pointer" }}
               >
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   style={{
                     marginRight: "8px",
                     fontSize: "20px",
-                    
                   }}
                 />
               </a>
@@ -76,7 +76,7 @@ const Portfolio = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="link">Link</button>
+                {/* <button className="link">Link</button> */}
               </a>
             </div>
           </div>
@@ -93,14 +93,13 @@ const Portfolio = () => {
               <a
                 className="toggle-link"
                 onClick={() => toggleModal("modal2")}
-                style={{ cursor: "pointer" }} 
+                style={{ cursor: "pointer" }}
               >
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   style={{
                     marginRight: "8px",
                     fontSize: "20px",
-                    
                   }}
                 />
               </a>
@@ -110,7 +109,7 @@ const Portfolio = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="link">Link</button>
+                {/* <button className="link">Link</button> */}
               </a>
             </div>
           </div>
@@ -126,20 +125,45 @@ const Portfolio = () => {
               <a
                 className="toggle-link"
                 onClick={() => toggleModal("modal3")}
-                style={{ cursor: "pointer" }} 
+                style={{ cursor: "pointer" }}
               >
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   style={{
                     marginRight: "8px",
                     fontSize: "20px",
-                    
                   }}
                 />
               </a>
 
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <button className="link">Link</button>
+                {/* <button className="link">Link</button> */}
+              </a>
+            </div>
+          </div>
+          <div className="work">
+            <img src={work4} alt="Customer Portal Integration" />
+            <div className="layer">
+              <h3>Customer Portal Integration with SAP</h3>
+              <p>
+                A user-friendly portal to streamline ticket raising/tracking
+                with seamless SAP sync.
+              </p>
+              <a
+                className="toggle-link"
+                onClick={() => toggleModal("modal4")}
+                style={{ cursor: "pointer" }}
+              >
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{
+                    marginRight: "8px",
+                    fontSize: "20px",
+                  }}
+                />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                {/* <button className="link">Link</button> */}
               </a>
             </div>
           </div>
@@ -296,6 +320,49 @@ const Portfolio = () => {
                 demonstrates secure API design, modular component structure, and
                 robust integration with the MySQL database for data storage and
                 retrieval.
+              </p>
+            </>
+          }
+        />
+      )}
+      {activeModal === "modal4" && (
+        <ProjectModal
+          id="modal4"
+          onClose={closeModal}
+          content={
+            <>
+              <p className="para">
+                The{" "}
+                <strong className="highlight">
+                  Customer Portal Integration with SAP
+                </strong>{" "}
+                is a full-stack web application developed using{" "}
+                <strong className="highlight">React</strong> for the frontend
+                and <strong className="highlight">Django</strong> for the
+                backend.
+              </p>
+              <p className="para">
+                It allows customers to raise and track tickets through a simple,
+                intuitive interface. Users can log in, submit new tickets, view
+                updates, and track resolution progress in real-time.
+              </p>
+              <p className="para">
+                The backend is tightly integrated with{" "}
+                <strong className="highlight">SAP</strong>, enabling seamless
+                synchronization of ticket data. This ensures that support teams
+                working in SAP and customers using the portal are always in
+                sync.
+              </p>
+              <p className="para">
+                Key features include role-based access for customers and admins,
+                ticket status dashboards, notification alerts, and automated
+                ticket assignments.
+              </p>
+              <p className="para">
+                This project showcases advanced{" "}
+                <strong className="highlight">SAP integration</strong>, secure
+                API development, and an optimized user experience across
+                platforms.
               </p>
             </>
           }
